@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./components/Home";
+import Signup from "./components/Signup";
+import Login from "./components/Login";
+import CreateVitalSigns from "./components/CreateVitalSigns";
+import Alert from "./components/Alert";
+import ListVitalSigns from "./components/ListVitalSigns";
+import MotivationalTips from "./components/MotivationalTips";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => (
+  <BrowserRouter>
+    <div className="container">
+      <Switch>
+        <Route component={Home} path="/" exact={true} />
+        <Route component={Signup} path="/signup" />
+        <Route component={Login} path="/login" />
+        <Route component={CreateVitalSigns} path="/" />
+        <Route component={ListVitalSigns} path="/" />
+        <Route component={Alert} path="/" />
+        <Route component={MotivationalTips} path="/" />
+      </Switch>
     </div>
-  );
-}
+  </BrowserRouter>
+);
 
 export default App;
