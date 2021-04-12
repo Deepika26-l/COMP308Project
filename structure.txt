@@ -1,0 +1,39 @@
+Express (Prabhleen & Asmita)
+•	Controllers:
+o	User
+	Create User
+	Authenticate User
+	checklist
+o	Vital Signs
+	Create Vital Sign
+	List All Vital Signs (for Nurse)
+	List Vital Signs by User (if user is a patient)
+o	Tips
+	Create Tips (Nurse)
+	List All Tips (Patient)
+•	Models:
+o	User:
+	firstName
+	lastName
+	email
+	password
+	userType (Patient or Nurse)
+o	Vital Signs:
+	bodyTemperature
+	heartRate
+	bloodPressure
+	respiratoryRate
+	patient (User)
+o	Tips:
+	tip (Data type: file)
+o	Alert:
+	alert
+React (Deepika & Arthur)
+•	Views:
+o	Registration
+o	Login
+o	Create Vital Signs (Patient: patient field must be auto filled / Nurse: patient field must be inserted)
+o	List Vital Signs (Patient: List only patient’s vital signs / Nurse: List all vital signs)
+o	Motivational Tips (Patient: List tips / Nurse: Sends tips)
+o	Check List of Signs and Symptoms (ML)
+
