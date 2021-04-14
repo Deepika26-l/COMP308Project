@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nurse Sign-Up Form</title>
+    <link rel="stylesheet" type="text/css" href="css/viewstyles.css" />
+</head>
+<body>
+  	
+    <h2 align="center">Nurse Sign Up</h2>
+    <h2 align="center" style="color: blue;"><%= description %></h2>
+
+	<form action="/register" method="post">
+        <table align="center">
+            <tr>
+                <td><b>Nurse ID</b></td>
+                <td><input type="number" class ="fields" name="nurseID" /></td>
+            </tr>
+            <tr>
+                <td><b>First Name</b></td>
+                <td><input type="text" class ="fields" name="firstName" /></td>
+            </tr>
+            <tr>
+                <td><b>Last Name</b></td>
+                <td><input type="text" class ="fields" name="lastName" /></td>
+            </tr>
+            <tr>
+                <td><b>Address</b></td>
+                <td><input type="text" class ="fields" name="address" /></td>
+            </tr>
+            <tr>
+                <td><b>City</b></td>
+                <td><input type="text" class ="fields" name="city" /></td>
+            </tr>
+            <tr>
+                <td><b>Email</b></td>
+                <td><input type="text" class ="fields" name="email" /></td>
+            </tr>
+            <tr>
+                <td><b>Password</b></td>
+                <td><input type="password" class ="fields" name="password" /></td>
+            </tr>
+        </table>
+        <br>        
+        <div align="center">
+            <button type="submit" class="form-field-no-caption">Sign Up</button>
+        </div>
+    </form>
+    <br>
+    <div align="center">
+        <a href="http://localhost:3000" >Return to the Main Page</a>
+    </div>
+    
+</body>
+</html>

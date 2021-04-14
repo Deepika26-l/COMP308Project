@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nurse Page</title>
+    <link rel="stylesheet" type="text/css" href="css/viewstyles.css" />
+</head>
+<body>
+    
+    <h2 align="center">Welcome Home to care our patients! </h2>
+    <h2 align="center" style="color: green;"><%= description %></h2>
+	<h2 align="center">Add Vital symptoms for Patient</h2>
+
+    <form action="/addVitalSigns" method="post">
+        <table align="center">
+            <tr>
+                <td><b>Enter email ID of patient</b></td>
+                <td><input type="text" class ="fields" name="email" /></td>
+            </tr>            
+            <tr>
+                <td><b>Body Temperature (in Fahrenheit)</b></td>
+                <td><input type="number" class ="fields" name="bodyTemperature" /></td>
+            </tr>
+            <tr>
+                <td><b>Heart Rate (BPM)</b></td>
+                <td><input type="number" class ="fields" name="heartRate" /></td>
+            </tr>
+            <tr>
+                <td><b>Blood Pressure (in mmHg)</b></td>
+                <td><input type="text" class ="fields" name="bp" /></td>
+            </tr>
+            <tr>
+                <td><b>Respiratory Rate (BPM)</b></td>
+                <td><input type="number" class ="fields" name="respiratoryRate" /></td>
+            </tr>     
+            <tr>
+                <td><b>Created At</b></td>
+                <td><input type="date" class ="fields" name="date" /></td>
+            </tr>           
+        </table>        
+        <br>        
+        <div align="center">
+            <button type="submit" class="form-field-no-caption">Add Symptoms</button>
+        </div>        
+    </form>
+    
+    <br>
+    <form action="/accessVitalSigns" method="POST">
+        <table align="center">
+            <tr>
+                <td><b>Access patient information</b></td>
+                <td><input type="text" class ="fields" name="email" placeholder="Enter Email ID of patient"/></td>                
+            </tr>
+        </table>
+        <br>
+        <div align="center">
+            <button type="submit" class="form-field-no-caption">Display</button>
+        </div>
+    </form>   
+
+    <br>
+    <form action="/addTips" method="POST">
+        <table align="center">
+            <tr>
+                <td><b>Send Motivational Tip to Patients</b></td>               
+                <td><input type="text" class ="fields" name="tips" placeholder="Enter tip for patient here"/></td>
+            </tr>
+        </table>
+        <br>
+        <div align="center">
+            <button type="submit" class="form-field-no-caption">Send</button>
+        </div>
+    </form>   
+    <br>
+    <div align="center">
+        <form action="/signout" method="post">
+            <button type="submit">SignOut</button>
+        </form> 
+    </div>
+</body>
+</html>

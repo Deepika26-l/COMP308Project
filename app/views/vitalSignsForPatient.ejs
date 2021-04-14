@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Vital Signs of Patient</title>
+    <link rel="stylesheet" type="text/css" href="css/viewstyles2.css" />
+</head>
+<body>
+
+    <h2 align="center">:: Data for Vital Signs of Patient ::</h2>
+    <h2 align="center"><p style="color:green"><%= email %></p></h2>
+    <br>
+        <table align="center" >
+		    <tr>                
+                <td><label><b>Body Temperature in Fahrenheit</b></label></td>
+                <td><label><b>Heart Rate (BPM)</b></label></td>
+                <td><label><b>Blood Pressure (mmHg)</b></label></td>
+                <td><label><b>Respiratory Rate (BPM)</b></label></td>   
+                <td><label><b>Date Created</b></label></td>             
+            </tr>
+	            <% vitalSigns.forEach(function(vitalSign){ %>	
+		    <tr>
+                <td><%= vitalSign.bodyTemperature %></td>
+                <td><%= vitalSign.heartRate %></td>
+                <td><%= vitalSign.bp %></td>
+                <td><%= vitalSign.respiratoryRate %></td> 
+                <td><%= vitalSign.date %></td>                        	
+            </tr>
+                 <% })%>	
+	    </table>
+        <br>
+        <div align="center">
+            <form action="/signout" method="post">
+                <button type="submit">SignOut</button>
+            </form> 
+        </div>
+        
+</body>
+</html>

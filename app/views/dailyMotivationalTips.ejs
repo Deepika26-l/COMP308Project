@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Daily Motivational Tips</title>
+    <link rel="stylesheet" type="text/css" href="css/viewstyles.css" />
+</head>
+<body>
+
+    <h1>Daily Motivational Tips</h1>
+    <br>
+   
+    <% tips.forEach(function(tip){ %>	
+    
+        <div align="center">
+		    <h2><%= tip.tips %></h2>
+        </div>
+    
+    <% })%>	
+        <br>
+        <div align="center">
+            <form action="/signout" method="post">
+                <button type="submit">SignOut</button>
+            </form> 
+        </div>
+        
+</body>
+</html>
