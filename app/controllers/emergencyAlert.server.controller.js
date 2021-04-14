@@ -45,7 +45,8 @@ exports.createEmergencyAlert = function(req, res, next){
         
         //Render patientPage
         res.render('patientPage', {
-                description: 'An emergency alert has been successfully sent!'               
+                description: 'An emergency alert has been successfully sent!', 
+                email:email               
             });
         }
     });

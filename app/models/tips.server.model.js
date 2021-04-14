@@ -5,6 +5,11 @@ const Schema = mongoose.Schema;
 //Define a new TipsSchema
 const TipsSchema = new Schema({
  tipsID: String,
+ email: {
+	type: String,
+	// Validate the email format
+	match: [/.+\@.+\..+/, "Please fill a valid email address"]
+ },
  tips: String
 });
 

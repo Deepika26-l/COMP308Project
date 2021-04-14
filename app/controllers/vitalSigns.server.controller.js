@@ -86,6 +86,8 @@ exports.findVitalSignsInfoByPatientEmail = function(req, res, next){
 //Create a new controller method to add new course
 exports.createDailyVitalSign = function(req, res, next){
 
+    email = req.body.email;
+
      //Create and instantiate an instance of VitalSign
      const vitalSign = new VitalSigns(req.body);
   
@@ -100,7 +102,8 @@ exports.createDailyVitalSign = function(req, res, next){
       else{          
           
           res.render('patientPage', {
-                  description: 'Vital Signs have been successfully Added!'                
+                  description: 'Vital Signs have been successfully Added!', 
+                  email: email                
               });
           }
       });

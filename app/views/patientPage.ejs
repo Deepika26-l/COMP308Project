@@ -9,7 +9,23 @@
     <h2>:: Welcome HOME ::</h2>
     <h2 align="center" style="color: green;"><%= description %></h2>
     <h2 align="center">Enter Daily Information of Vital Signs</h2>
-
+    <br>
+    <form action="/sendEmergencyAlert" method="POST">
+        <table align="center">
+            <tr>
+                <td style="color: red;"><b>Send Emergency Alert</b></td>
+                <td><input type="text" class ="fields" name="email" placeholder="Enter Email ID of nurse"/></td>                
+            </tr>
+            <tr>
+                <td colspan="2"><input type="text" class ="fields" name="alertMessage" placeholder="Enter Emergency message for nurse here"/></td>
+            </tr>
+        </table>
+        <br>
+        <div align="center">
+            <button type="submit" class="form-field-no-caption">Send</button>
+        </div>
+    </form>   
+    <br>
     <form action="/addDailyVitalSigns" method="post">
         <table align="center">                    
             <tr>
@@ -29,7 +45,7 @@
                 <td><input type="number" class ="fields" name="respiratoryRate" /></td>
             </tr>     
             <tr>
-                <td><b>Confirm your email ID again</b></td>
+                <td><b>Confirm your email ID</b></td>
                 <td><input type="text" class ="fields" name="email" /></td>
             </tr>   
             <tr>
@@ -43,25 +59,13 @@
         </div>        
     </form>
    <br>
-    <form action="/sendEmergencyAlert" method="POST">
-        <table align="center">
-            <tr>
-                <td style="color: red;"><b>Send Emergency Alert</b></td>
-                <td><input type="text" class ="fields" name="email" placeholder="Enter Email ID of nurse"/></td>                
-            </tr>
-            <tr>
-                <td colspan="2"><input type="text" class ="fields" name="alertMessage" placeholder="Enter Emergency message for nurse here"/></td>
-            </tr>
-        </table>
-        <br>
-        <div align="center">
-            <button type="submit" class="form-field-no-caption">Send</button>
-        </div>
-    </form>   
-
-    <br>
     <div align="center">
-        <a href="/dailyMotivationalTip">Access Daily Motivational Tip</a>
+        <form action="/dailyMotivationalTip" method="post">
+            <tr>
+                <td><input type="hidden" class ="fields" name="email" value="<%= email %>"/></td>
+                <td><button type="submit" class="form-field-no-caption">Access Daily Motivational Tip</button></td>
+            </tr>
+        </form>
     </div>
     <br>
     <div align="center">

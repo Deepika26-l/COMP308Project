@@ -83,7 +83,8 @@ exports.authenticate = function(req, res, next) {
 				res.cookie('token', token, { maxAge: jwtExpirySeconds * 1000,httpOnly: true});
 			
 				res.render('patientPage',{
-					description: '***' 
+					description: '***', 
+					email:email
 				});				
 			} else {
 				res.json({status:"error", message: "Invalid email/password!!!",

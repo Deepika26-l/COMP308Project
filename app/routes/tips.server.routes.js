@@ -8,7 +8,7 @@ module.exports = function(app) {
 	app.post('/addTips', tips.createTip);
 
 	//Get daily Motivational Tips added by nurse at route /dailyMotivationalTip
-	app.get('/dailyMotivationalTip', tips.listDailyMotivationalTips);
+	app.post('/dailyMotivationalTip', tips.listDailyMotivationalTips);
 	
 }; 
 
