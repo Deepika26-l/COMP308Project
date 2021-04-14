@@ -4,6 +4,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import Home from './Home';
 
 //
 function App() {
@@ -73,7 +74,7 @@ function App() {
           <br/>
           <button onClick={auth}>Login</button>
         </div>
-        : <View screen={screen} setScreen={setScreen} />
+        : <Home screen={screen} setScreen={setScreen} />
       }
     </div>
   );

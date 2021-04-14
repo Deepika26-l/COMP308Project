@@ -13,7 +13,7 @@ import './App.css';
 
 import Home from './components/Home';
 import Login from './components/Login';
-import SignUp from './components/Signup';
+import Signup from './components/Signup';
 // import Videos from './components/Videos';
 // import ListPatients from './components/ListPatients';
 // import DisplayPatient from './components/DisplayPatient';
@@ -26,10 +26,10 @@ function App() {
 
   return (
     <Router>
-      <Navbar>
+      <Navbar bg="light" expand="lg">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav class="navbar">
+          <Nav className="mr-auto">
             <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/login">Login</Nav.Link>
             <Nav.Link href="/signup">Register</Nav.Link>   

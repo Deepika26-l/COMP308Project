@@ -5,11 +5,14 @@ import { Form, Button, Container, Spinner } from "react-bootstrap";
 const Signup = props => {
 
     const [state, setState] = useState({
+        nurseId: "",
         firstName: "",
         lastName: "",
+        address: "",
+        city: "",
+        phone: "",
         email: "",
-        password: "",
-        userType: ""
+        password: ""
     });
 
     //
@@ -51,7 +54,7 @@ const Signup = props => {
                     textAlign: "center", 
                     color: "blueviolet"
                 }}>
-                Prediction Data
+                Register
             </h1>
             {showLoading && (
               <Spinner animation="border" role="status"></Spinner>
