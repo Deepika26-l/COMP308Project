@@ -1,63 +1,61 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect
+} from "react-router-dom";
+
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import './App.css';
 
-import Home from "./components/Home";
-import Signup from "./components/Signup";
-import Login from "./components/Login";
-import CreateVitalSigns from "./components/CreateVitalSigns";
-import Alert from "./components/Alert";
-import ListVitalSigns from "./components/ListVitalSigns";
-import MotivationalTips from "./components/MotivationalTips";
+import Home from './components/Home';
+import Login from './components/Login';
+import SignUp from './components/Signup';
+// import Videos from './components/Videos';
+// import ListPatients from './components/ListPatients';
+// import DisplayPatient from './components/DisplayPatient';
+// import DisplayAlert from './components/DisplayAlert';
+// import CreateEmergencyAlert from './components/CreateEmergencyAlert';
+// import AlertHistory from './components/AlertHistory';
 
 
-function App(){
-  return(
+function App() {
+
+  return (
     <Router>
-
       <Navbar>
-        <Navbar.Collapse>
-          <Nav>
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/signup">Signup</Nav.Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav class="navbar">
+            <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link href="/">CreateVitalSigns</Nav.Link>
-            <Nav.Link href="/">ListVitalSigns</Nav.Link>
-            <Nav.Link href="/">MotivationalTips</Nav.Link>
-            <Nav.Link href="/">Alert</Nav.Link>
+            <Nav.Link href="/signup">Register</Nav.Link>   
+            {/* <Nav.Link href="/alertshistory">Alert History</Nav.Link>   
+            <Nav.Link href="/videos">Videos</Nav.Link>          */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-
-      <div className="container">
-        <Route render = {() => <Home/>} path="/" />
-        <Route render = {() => <Signup/>} path="/" />
-        <Route render = {() => <Login/>} path="/" />
-        <Route render = {() => <CreateVitalSigns/>} path="/" />
-        <Route render = {() => <ListVitalSigns/>} path="/" />
-        <Route render = {() => <MotivationalTips/>} path="/" />
-        <Route render = {() => <Alert/>} path="/" />
+    
+      <div>          
+          <Route render ={()=> < Home />} path="/home" />
+          <Route render ={()=> < Login />} path="/login" />
+          <Route render ={()=> < Signup />} path="/signup" /> 
+          {/* <Route render ={()=> < Videos />} path="/videos" /> 
+          <Route render ={()=> < ListPatients />} path="/patients" />
+          <Route render ={()=> < DisplayPatient />} path="/patient/:id" />
+          <Route render ={()=> < AlertHistory />} path="/alertshistory" />                  
+          <Route render ={()=> < DisplayAlert />} path="/alerthistory/:id" />
+          <Route render ={()=> < CreateEmergencyAlert />} path="/alerts" /> */}
+          
       </div>
+
     </Router>
+
+
   );
 }
-
-
-// const App = () => (
-//   <BrowserRouter>
-//     <div className="container">
-//       <Switch>
-//         <Route component={Home} path="/" exact={true} />
-//         <Route component={Signup} path="/signup" />
-//         <Route component={Login} path="/login" />
-//         <Route component={CreateVitalSigns} path="/" />
-//         <Route component={ListVitalSigns} path="/" />
-//         <Route component={Alert} path="/" />
-//         <Route component={MotivationalTips} path="/" />
-//       </Switch>
-//     </div>
-//   </BrowserRouter>
-// );
 
 export default App;
