@@ -1,6 +1,9 @@
 import { withRouter } from 'react-router-dom';
 import React, { useState } from "react";
 import { Form, Button, Container, Spinner } from "react-bootstrap";
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+
 //import Jumbotron from 'react-bootstrap/Jumbotron';
 
 function Home()
