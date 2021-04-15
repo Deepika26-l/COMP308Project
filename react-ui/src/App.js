@@ -26,7 +26,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar bg="light" expand="lg">
+      {/* <Navbar bg="light" expand="lg">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
@@ -35,20 +35,19 @@ function App() {
             <Nav.Link href="/signup">Register</Nav.Link>   
             {/* <Nav.Link href="/alertshistory">Alert History</Nav.Link>   
             <Nav.Link href="/videos">Videos</Nav.Link>          */}
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+        
     
       <div>          
           <Route render ={()=> < Home />} path="/home" />
           <Route render ={()=> < Login />} path="/login" />
           <Route render ={()=> < Signup />} path="/signup" /> 
-          <Route render ={()=> < Videos />} path="/videos" /> 
+          {/* <Route render ={()=> < Videos />} path="/videos" /> 
           <Route render ={()=> < ListPatients />} path="/patients" />
           <Route render ={()=> < DisplayPatient />} path="/patient/:id" />
           <Route render ={()=> < AlertHistory />} path="/alertshistory" />                  
           <Route render ={()=> < DisplayAlert />} path="/alerthistory/:id" />
-          <Route render ={()=> < CreateEmergencyAlert />} path="/alerts" /> 
+          <Route render ={()=> < CreateEmergencyAlert />} path="/alerts" /> */}
+          
       </div>
 
     </Router>
