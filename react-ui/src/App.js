@@ -43,13 +43,12 @@ function App() {
           <Route render ={()=> < Home />} path="/home" />
           <Route render ={()=> < Login />} path="/login" />
           <Route render ={()=> < Signup />} path="/signup" /> 
-          {/* <Route render ={()=> < Videos />} path="/videos" /> 
+          <Route render ={()=> < Videos />} path="/videos" /> 
           <Route render ={()=> < ListPatients />} path="/patients" />
           <Route render ={()=> < DisplayPatient />} path="/patient/:id" />
           <Route render ={()=> < AlertHistory />} path="/alertshistory" />                  
           <Route render ={()=> < DisplayAlert />} path="/alerthistory/:id" />
-          <Route render ={()=> < CreateEmergencyAlert />} path="/alerts" /> */}
-          
+          <Route render ={()=> < CreateEmergencyAlert />} path="/alerts" /> 
       </div>
 
     </Router>
