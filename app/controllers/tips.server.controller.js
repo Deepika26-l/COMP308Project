@@ -65,7 +65,7 @@ exports.createTip = function(req, res, next){
         
         //Render studentsPage
         res.render('nursePage', {
-            description: 'A Tip has been successfully Sent!'                
+            description: 'A Motivational message has been successfully Sent!'                
         });
         }
     });
