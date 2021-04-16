@@ -38,9 +38,9 @@ function App() {
         
     
       <div>          
-          <Route render ={()=> < Home />} path="/home" />
-          <Route render ={()=> < Login />} path="/login" />
-          <Route render ={()=> < Signup />} path="/signup" /> 
+          <Route render ={()=> < Home />} path="/Home" />
+          <Route render ={()=> < Login />} path="/Login" />
+          <Route render ={()=> < Signup />} path="/Signup" /> 
           {/* <Route render ={()=> < Videos />} path="/videos" /> 
           <Route render ={()=> < ListPatients />} path="/patients" />
           <Route render ={()=> < DisplayPatient />} path="/patient/:id" />
